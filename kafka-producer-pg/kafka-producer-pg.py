@@ -29,7 +29,7 @@ app = FastAPI()
 
 # Enviar los datos a Kafka
 def send_to_kafka(data: dict):
-    producer.send('minecraft', value=data)
+    producer.send('minecraft-pgsql', value=data)
     producer.flush()  # Asegurarse de que el mensaje se envíe
 
 # Endpoint que recibe el POST vacío

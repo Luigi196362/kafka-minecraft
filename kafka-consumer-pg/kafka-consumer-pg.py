@@ -40,7 +40,7 @@ def start_consumer():
         return
 
     consumer = KafkaConsumer(
-        'minecraft',
+        'minecraft-pgsql',
         bootstrap_servers=bootstrap_servers,
         security_protocol="SASL_SSL",
         sasl_mechanism=sasl_mechanism,
