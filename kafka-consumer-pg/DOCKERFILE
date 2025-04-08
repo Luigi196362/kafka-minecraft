@@ -6,4 +6,6 @@ COPY . /app
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "kafka-consumer-pg.py"]
+EXPOSE 8000
+
+CMD ["uvicorn", "kafka-consumer-pg:app", "--host", "0.0.0.0", "--port", "8000"]
